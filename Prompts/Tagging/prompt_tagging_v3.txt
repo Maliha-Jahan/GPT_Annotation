@@ -1,0 +1,54 @@
+Instruction for Generating a List of Results about Identification of National Origin, Ethnicity, and Race based on a Conversation Transcript:
+
+Introduction:
+In this task, you will generate a structured list of results containing the lines in a transcript where a speaker's national origin, ethnicity, or race was specified or identified. Before delving into the task, we elaborate on what national origin, ethnicity, and race entail within the given context and describe the types of identification.
+
+Definitions of National Origin, Ethnicity, and Race:
+1. National Origin: The national origin of a speaker refers to the nationality associated with the nation where the speaker was born or where their ancestors originated from. National origin is not the name of a nation but its nationality. Examples of national origins include Chinese, Korean, Vietnamese, Cambodian, Thai, Iranian, Filipino, Mexican, Dominican, Cuban, Puerto Rican, Spanish, Portuguese, etc.
+
+2. Race: A speaker's race can be categorized into one of seven groups: White, Black or African American, Asian, American Indian or Alaska Native, Native Hawaiian or Other Pacific Islander, Multiracial, and Unknown.
+
+3. Ethnicity: Ethnicity denotes the Hispanic origin of the speaker and can fall into one of the following three groups: Hispanic or Latinx, Non-Hispanic or Non-Latinx, and Unknown.
+
+Types of Identification:
+A line can have three distinct types of identification:
+
+1. Self-Identification: This type involves a speaker explicitly identifying or directly specifying their own national origin, ethnicity, or race through their own words.
+
+2. Other-Person In-Interaction Identification: In this category, a speaker identifies or directly specifies the ethnicity, national origin, or race of another speaker participating in the conversation. This is often done using second-person or third-person pronouns, but there can be exceptions.
+
+3. Other-Person Outside-Interaction Identification: This form of identification occurs when a speaker identifies or directly specifies the ethnicity, national origin, or race of an individual who is not part of the ongoing conversation. This is often done using third-person pronouns, but there can be exceptions.
+
+Requirements for Self-Identification and Other-Person In-Interaction Identification:
+For both self-identification and other-person in-interaction identification, it is crucial that both the person identifying and the person being identified (whose race, national origin, or ethnicity is being specified) are active speakers within the ongoing conversation.
+
+Task Description:
+Now, let's describe the task you need to perform in a structured manner. Follow these steps carefully:
+
+1. Identify Unique Speakers: Start by reading the entire transcript thoroughly to identify the unique speakers engaged in the conversation. Speaker labels, such as 'SPEAKER_00', 'SPEAKER_01', etc., are used to designate different speakers in the transcript. Segments of dialogue preceded by the same speaker label are spoken by the same speaker. For instance, if you find three unique speaker labels, namely 'SPEAKER_01', 'SPEAKER_07', and 'SPEAKER_02', there are three distinct speakers in the conversation.
+
+2. Find Information: After identifying the unique speakers, read the entire transcript again, aiming to find lines or phrases where any of the three types of information of a speaker (ethnicity, national origin, and race) are being specified, or identified. Take note of the speaker making the identification and the speaker whose national origin, ethnicity, or race is being identified. Be careful not to over-interpret or include information that isn't solidly supported by the transcript.
+
+3. Create the List of Results: Whenever you find a line or phrase containing any of the three types of information mentioned before, add an item to the list of results. Try not to miss any such line. Each item in the list should follow the specified structure:
+
+"Identifier Speaker: <Identifier Speaker Number>, Identified Speaker: <Identified Speaker Number>, Line: <Line>, Speaker Ethnicity: <Speaker Ethnicity>, Speaker National Origin: <Speaker National Origin>, Speaker Race: <Speaker Race>, Category: <Category>"
+
+- <Identifier Speaker Number> represents the unique speaker label (e.g., 'SPEAKER_04', 'SPEAKER_01', etc.) of the speaker who is making the identification. This field must not be left blank.
+- <Identified Speaker Number> represents the unique speaker label of the speaker whose information is being identified. Sometimes you cannot infer <Identified Speaker Number>; put 'Unknown' for <Identified Speaker Number> in those cases. For Self-Identification, <Identifier Speaker Number> and <Identified Speaker Number> will be the same.
+- <Line> is a line or phrase in the transcript where you found a speaker's ethnicity, national origin, or race being identified or specified. <Line> should not include more than one line.
+- <Speaker Ethnicity> refers to the speaker's ethnicity or Hispanic origin. It can only be one of the three previously mentioned ethnicity groups. If you cannot infer the speaker's ethnicity, use 'Unknown'.
+- <Speaker National Origin> denotes the inferred national origin of the speaker. If you cannot infer the speaker's national origin, use 'Unknown'.
+- <Speaker Race> indicates which of the seven race groups the speaker belongs to. If you cannot infer the speaker's race, use 'Unknown'.
+- <Category> specifies the type of identification found in <Line>. As mentioned before, the types are self-identification, Other-person in-interaction identification, or Other-person outside-interaction identification. Follow this structure diligently.
+
+Important Considerations:
+- Only include lines that relate exclusively to a speaker's national origin, ethnicity, and race.
+- Even if you find the mention of a race, national origin, or ethnicity, make sure it was mentioned in relation to one of the speakers identity before including in the list of results.
+- Follow the structure carefully.
+
+Conclusion:
+Following these elaborated instructions, you are now ready to generate the list of results based on the provided transcript. Pay careful attention to the details and the structure of the items in the list to present accurate and comprehensive information about the identification of national origin, ethnicity, and race for each unique speaker in the conversation.
+
+Please generate a list of result items, following the above instruction and the previously mentioned structure, for the following transcript-
+
+<Start of transcript>
