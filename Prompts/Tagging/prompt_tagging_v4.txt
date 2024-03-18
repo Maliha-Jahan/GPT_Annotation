@@ -1,0 +1,62 @@
+Instruction for Generating a List of Results about Self-Identification of National Origin, Ethnicity, and Race based on a Conversation Transcript:
+
+Introduction:
+In this task, you will generate a structured list of results containing the lines in a transcript where a speaker specified or identified national origin, ethnicity, or race. Before delving into the task, we elaborate on what national origin, ethnicity, and race entail within the given context and describe self-identification.
+
+Definitions of National Origin, Ethnicity, and Race:
+1. National Origin: The national origin of a speaker refers to the nationality associated with the nation where the speaker was born or where their ancestors originated from. National origin is not the name of a nation but its nationality. Examples of national origins include Chinese, Korean, Vietnamese, Cambodian, Thai, Iranian, Filipino, Mexican, Dominican, Cuban, Puerto Rican, Spanish, Portuguese, etc.
+
+2. Race: A speaker's race can be categorized into one of seven groups: White, Black or African American, Asian, American Indian or Alaska Native, Native Hawaiian or Other Pacific Islander, Multiracial, and Unknown.
+
+3. Ethnicity: Ethnicity denotes the Hispanic origin of the speaker and can fall into one of the following three groups: Hispanic or Latinx, Non-Hispanic or Non-Latinx, and Unknown.
+
+Definition of Self-Identification:
+Self-Identification: When a speaker identifies or directly specifies their own national origin, ethnicity, or race through their own words, we call it self-identification.
+
+Task Description:
+Now, let's describe the task you need to perform in a structured manner. Follow these steps carefully:
+
+1. Identify Unique Speakers: Start by reading the entire transcript thoroughly to identify the unique speakers engaged in the conversation. Speaker labels, such as 'SPEAKER_00', 'SPEAKER_01', etc., are used to designate different speakers in the transcript. Segments of dialogue preceded by the same speaker label are spoken by the same speaker. For instance, if you find three unique speaker labels, namely 'SPEAKER_01', 'SPEAKER_07', and 'SPEAKER_02', there are three distinct speakers in the conversation.
+
+2. Decide if the transcript is relevant: Go through the transcript and decide if the conversation has any solid information on any of the speakers' race, ethnicity, or national origin. You should not interpret a mere mention of a country, race, or nationality as relevant information. It has to be related to one of the speakers. If the transcript has no such information, return an empty response.
+
+3. Find Information: If the transcript is relevant, after identifying the unique speakers, read the entire transcript again, aiming to find lines or phrases where a speaker self-identifies their ethnicity, national origin, and race. Take note of the speaker who is self-identifying.
+
+4. Avoid Over-interpretation: Be careful not to over-interpret or include information that isn't solidly supported by the transcript. If the standalone line does not contain a speaker's self-identification about national origin/ethnicity/race, then ignore that line. A few examples of relevant and irrelevant lines are given below:
+Line: "Hearing racial slurs was nothing new to me". Irrelevant.
+Line: "I wrote this Japanese-American poem". Irrelevant. The speaker is not identifying as Japanese-American. They just wrote a poem.
+Line: "I want to break the stereotype about Asian parents being strict". Relevant. The speaker's race is Asian.
+Line: "I was born and raised in America. It was difficult to grow up as a black kid". Relevant. The speaker's race is Black Or African American.
+Line: "I met people from a lot of races". Irrelevant.
+Line: "There were a lot of Latinos where I grew up". Irrelevant. The speaker is not Latino.
+Line: "I am not white". Irrelevant. The speaker is not White, but we don't know what race they belong to.
+Line: "They were all Hispanic, except one of them, who was Black". Irrelevant. The speaker is talking about others.
+Line: "You come from an Asian family, right?". Irrelevant. The speaker is talking about the listener.
+Line: "My parents were the only Nigerians there." Relevant. The speaker's national origin is Nigeria.
+Line: " I love Chinese food." Irrelevant.
+Line: "I am Rin Nakamori." Irrelevant. Just because the name sounds Japanese does not confirm that the speaker is Japanese.
+Line: "It can get very difficult for us as Native Americans". Relevant. The speaker's race is American Indian Or Alaskan Native.
+
+5. Create the List of Results: Whenever you find a line or phrase containing any of the three types of information mentioned before, add an item to the list of results. Each item in the list should follow the specified structure:
+
+"Identifier Speaker: <Identifier Speaker Number>, Identified Speaker: <Identified Speaker Number>, Line: <Line>, Speaker Ethnicity: <Speaker Ethnicity>, Speaker National Origin: <Speaker National Origin>, Speaker Race: <Speaker Race>, Category: <Category>"
+
+- <Identifier Speaker Number> represents the unique speaker label (e.g., 'SPEAKER_04', 'SPEAKER_01', etc.) of the speaker who is making the identification. This field must not be left blank.
+- <Identified Speaker Number> repeat what speaker label you put in <Identifier Speaker Number>.
+- <Line> is a line or phrase in the transcript where you found a speaker's ethnicity, national origin, or race being identified or specified. <Line> should not include more than one line.
+- <Speaker Ethnicity> refers to the speaker's ethnicity or Hispanic origin. It can only be one of the three previously mentioned ethnicity groups. If you cannot infer the speaker's ethnicity, use 'Unknown'.
+- <Speaker National Origin> denotes the inferred national origin of the speaker. If you cannot infer the speaker's national origin, use 'Unknown'.
+- <Speaker Race> indicates which of the seven race groups the speaker belongs to. If you cannot infer the speaker's race, use 'Unknown'.
+- <Category> always put 'self-identification' here.
+
+Important Considerations:
+- Only include lines that relate exclusively to a speaker's national origin, ethnicity, and race.
+- Even if you find the mention of a race, national origin, or ethnicity, make sure it was mentioned in relation to one of the speakers' identities before including it in the list of results.
+- Follow the structure carefully.
+
+Conclusion:
+Following these elaborated instructions, you are now ready to generate the list of results based on the provided transcript. Pay careful attention to the details and the structure of the items in the list to present accurate and comprehensive information about the identification of national origin, ethnicity, and race for each unique speaker in the conversation.
+
+Please generate a list of result items, following the above instruction and the previously mentioned structure, for the following transcript-
+
+<Start of transcript>
