@@ -185,7 +185,6 @@ def split_multiples(df, col, valid_vals):
 
 
 def post_process(df):
-    # File,Source,Target,Ethnicity,National Origin,Race,Type,Line
     df = df.values
     df[np.where((df == "unknown") | (df == "Unknown") | (df == "n/a") | (df == "na")
                 | (df == "N/A") | (df == "NA"))] = "unknown"
@@ -199,15 +198,13 @@ def post_process(df):
 
     for i in range(df.shape[0]):
         temp = str(df[i, type]).lower()
-        # temp = re.sub("([\(\[]).*?([\)\]])", "\g<1>\g<2>", temp)
         temp = re.sub("([\(\[]).*?([\)\]])", "", temp)
         if (temp in valid_types[0].lower()) or (valid_types[0].lower() in temp):
             df[i, type] = valid_types[0]
         elif (temp in valid_types[1].lower()) or (valid_types[1].lower() in temp):
             df[i, type] = valid_types[1]
         elif (temp in valid_types[2].lower()) or (valid_types[2].lower() in temp):
-            df[i, type] = valid_types[2]  #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>deletes 3rd person
-            df_del.append(i)
+            df[i, type] = valid_types[2] 
         else:
             df[i, type] = "unknown"
             df_del.append(i)
