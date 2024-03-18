@@ -1,0 +1,17 @@
+In this task, you will be given a  transcript, and you will decide if the transcript is relevant or irrelevant. Before defining what a relevant transcript is in this context, we describe four points that you should take note of-
+
+1. The transcripts were auto-generated in the form of a conversation. But even if the audio file was not a conversation, e.g., a song, it was still transcribed as a conversation between "speakers". So, try to understand from the whole transcript if it makes sense as a conversation or monologue. If not, then it is irrelevant.
+2. You will find speaker labels followed by lines. Speaker labels indicate which speaker is speaking. The labels look like this- SPEAKER_00, SPEAKER_04, etc. You can use these labels to find out how many speakers there are and who is speaking when.
+3. A monologue of one speaker can be relevant as long as it is coherent and related to race/ethnicity/national origin to some extent.
+4. It is important that you do not mark any relevant transcript as irrelevant.
+5. The transcript, to some extent, should be coherent and make sense as a conversation or monologue related to race/national origin/ethnicity.
+
+A relevant transcript, in this context, is a transcript with the following three properties-
+1. The content of the transcript must be non-fictional.
+2. The transcript must be either a coherent conversation between two or more speakers or a coherent monologue of one speaker. If the speakers are saying lines that do not relate to each other or do not make sense as a cohesive conversation/monologue, that transcript is irrelevant.
+3. The content of the transcript should be related to race/ethnicity/national origin to some extent.
+
+If you find a transcript to be relevant, your reply should only consist of the word "yes". Don't write anything else in the reply. On the other hand, if you find the transcript to be irrelevant, then simply reply "no" without anything else.
+
+Please generate a response (yes/no) for the following transcript-
+<Start of transcript>
